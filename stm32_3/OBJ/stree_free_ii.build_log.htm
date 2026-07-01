@@ -1,0 +1,205 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.41.0.0
+Copyright (C) 2024 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: DONGLI lenovo, DONGLI, LIC=HN0AE-5ZYVS-Z98G9-4XJQK-ZJPCL-YK6CB
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.41.0.0
+Toolchain Path:  D:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.41.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.3.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\lenovo\Desktop\第三版\stm32_3\USER\steer_freeII.uvprojx
+Project File Date:  06/12/2026
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.05 update 1 (build 106)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'steer_free_II'
+assembling startup_stm32f10x_hd.s...
+compiling system_stm32f10x.c...
+compiling kalman.c...
+compiling main.c...
+control.h(13): warning:  #1295-D: Deprecated declaration get_point1_p - give arg types
+  uint8_t get_point1_p();
+control.h(14): warning:  #1295-D: Deprecated declaration get_point2_p - give arg types
+  uint8_t get_point2_p();   //处理坐标函数
+main.c: 2 warnings, 0 errors
+compiling core_cm3.c...
+compiling misc.c...
+compiling stm32f10x_bkp.c...
+compiling stm32f10x_dac.c...
+compiling stm32f10x_dbgmcu.c...
+compiling stm32f10x_adc.c...
+compiling stm32f10x_crc.c...
+compiling stm32f10x_it.c...
+compiling stm32f10x_exti.c...
+compiling stm32f10x_can.c...
+compiling stm32f10x_dma.c...
+compiling control.c...
+control.h(13): warning:  #1295-D: Deprecated declaration get_point1_p - give arg types
+  uint8_t get_point1_p();
+control.h(14): warning:  #1295-D: Deprecated declaration get_point2_p - give arg types
+  uint8_t get_point2_p();   //处理坐标函数
+control.c(512): warning:  #223-D: function "abs" declared implicitly
+  			  if(abs(a_Err) + abs(b_Err) < 800){/* 声光提示 */
+control.c(574): warning:  #940-D: missing return statement at end of non-void function "get_point2_p"
+  }
+control.c(610): warning:  #1-D: last line of file ends without a newline
+  }
+control.c(294): warning:  #177-D: function "approach_float" was declared but never referenced
+  static float approach_float(float current, float target, float max_step)
+control.c(108): warning:  #177-D: variable "servo_offset_x" was declared but never referenced
+  static float servo_offset_x = 0.0f;
+control.c(109): warning:  #177-D: variable "servo_offset_y" was declared but never referenced
+  static float servo_offset_y = 0.0f;
+control.c: 8 warnings, 0 errors
+compiling stm32f10x_cec.c...
+compiling stm32f10x_flash.c...
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_i2c.c...
+compiling stm32f10x_iwdg.c...
+compiling stm32f10x_pwr.c...
+compiling stm32f10x_rtc.c...
+compiling stm32f10x_spi.c...
+compiling stm32f10x_wwdg.c...
+compiling delay.c...
+compiling stm32f10x_sdio.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_tim.c...
+compiling bsp.c...
+compiling bsp_timer.c...
+..\USER\control.h(13): warning:  #1295-D: Deprecated declaration get_point1_p - give arg types
+  uint8_t get_point1_p();
+..\USER\control.h(14): warning:  #1295-D: Deprecated declaration get_point2_p - give arg types
+  uint8_t get_point2_p();   //处理坐标函数
+..\BSP\bsp_timer.c(68): warning:  #550-D: variable "TIM_TimeBaseStructure" was set but never used
+     TIM_TimeBaseInitTypeDef  TIM_TimeBaseStructure;
+..\BSP\bsp_timer.c: 3 warnings, 0 errors
+compiling bsp_gpio.c...
+compiling bsp_servo.c...
+compiling bsp_ps2.c...
+compiling bsp_beep.c...
+compiling bsp_adc.c...
+compiling oled_iic.c...
+compiling oled_fonts.c...
+compiling bsp_juice_adc.c...
+compiling bsp_usart.c...
+compiling user_ps2.c...
+..\APP\user_ps2.c(59): warning:  #175-D: subscript out of range
+  					if(Angle_J[grop][2] >= 180)
+..\APP\user_ps2.c(60): warning:  #175-D: subscript out of range
+  							Angle_J[grop][2] = 180;
+..\APP\user_ps2.c(62): warning:  #175-D: subscript out of range
+  						Angle_J[grop][2] +=10;//加10度的向上加
+..\APP\user_ps2.c(65): warning:  #175-D: subscript out of range
+  					if(Angle_J[grop][2] <= 0)
+..\APP\user_ps2.c(66): warning:  #175-D: subscript out of range
+  							Angle_J[grop][2] = 0;
+..\APP\user_ps2.c(68): warning:  #175-D: subscript out of range
+  						Angle_J[grop][2] -=10;//加10度的向下减
+..\APP\user_ps2.c(73): warning:  #175-D: subscript out of range
+  					if(Angle_J[grop][3] >= 180)
+..\APP\user_ps2.c(74): warning:  #175-D: subscript out of range
+  							Angle_J[grop][3] = 180;
+..\APP\user_ps2.c(76): warning:  #175-D: subscript out of range
+  						Angle_J[grop][3] +=10;//加10度的向上加
+..\APP\user_ps2.c(79): warning:  #175-D: subscript out of range
+  					if(Angle_J[grop][3] <= 0)
+..\APP\user_ps2.c(80): warning:  #175-D: subscript out of range
+  							Angle_J[grop][3] = 0;
+..\APP\user_ps2.c(82): warning:  #175-D: subscript out of range
+  						Angle_J[grop][3] -=10;//加10度的向下减
+..\APP\user_ps2.c(87): warning:  #175-D: subscript out of range
+  					if(Angle_J[grop][4] >= 180)
+..\APP\user_ps2.c(88): warning:  #175-D: subscript out of range
+  							Angle_J[grop][4] = 180;
+..\APP\user_ps2.c(90): warning:  #175-D: subscript out of range
+  						Angle_J[grop][4] +=10;//加10度的向上加
+..\APP\user_ps2.c(93): warning:  #175-D: subscript out of range
+  					if(Angle_J[grop][4] <= 0)
+..\APP\user_ps2.c(94): warning:  #175-D: subscript out of range
+  							Angle_J[grop][4] = 0;
+..\APP\user_ps2.c(96): warning:  #175-D: subscript out of range
+  						Angle_J[grop][4] -=10;//加10度的向下减
+..\APP\user_ps2.c(101): warning:  #175-D: subscript out of range
+  					if(Angle_J[grop][5] >= 180)
+..\APP\user_ps2.c(102): warning:  #175-D: subscript out of range
+  							Angle_J[grop][5] = 180;
+..\APP\user_ps2.c(104): warning:  #175-D: subscript out of range
+  						Angle_J[grop][5] +=10;//加10度的向上加
+..\APP\user_ps2.c(107): warning:  #175-D: subscript out of range
+  					if(Angle_J[grop][5] <= 0)
+..\APP\user_ps2.c(108): warning:  #175-D: subscript out of range
+  							Angle_J[grop][5] = 0;
+..\APP\user_ps2.c(110): warning:  #175-D: subscript out of range
+  						Angle_J[grop][5] -=10;//加10度的向下减
+..\APP\user_ps2.c(115): warning:  #175-D: subscript out of range
+  					if(Angle_J[grop][6] >= 180)
+..\APP\user_ps2.c(116): warning:  #175-D: subscript out of range
+  							Angle_J[grop][6] = 180;
+..\APP\user_ps2.c(118): warning:  #175-D: subscript out of range
+  						Angle_J[grop][6] +=10;//加10度的向上加
+..\APP\user_ps2.c(121): warning:  #175-D: subscript out of range
+  					if(Angle_J[grop][6] <= 0)
+..\APP\user_ps2.c(122): warning:  #175-D: subscript out of range
+  							Angle_J[grop][6] = 0;
+..\APP\user_ps2.c(124): warning:  #175-D: subscript out of range
+  						Angle_J[grop][6] -=10;//加10度的向下减
+..\APP\user_ps2.c(129): warning:  #175-D: subscript out of range
+  					if(Angle_J[grop][7] >= 180)
+..\APP\user_ps2.c(130): warning:  #175-D: subscript out of range
+  							Angle_J[grop][7] = 180;
+..\APP\user_ps2.c(132): warning:  #175-D: subscript out of range
+  						Angle_J[grop][7] +=10;//加10度的向上加
+..\APP\user_ps2.c(135): warning:  #175-D: subscript out of range
+  					if(Angle_J[grop][7] <= 0)
+..\APP\user_ps2.c(136): warning:  #175-D: subscript out of range
+  							Angle_J[grop][7] = 0;
+..\APP\user_ps2.c(138): warning:  #175-D: subscript out of range
+  						Angle_J[grop][7] -=10;//加10度的向下减
+..\APP\user_ps2.c: 36 warnings, 0 errors
+compiling bsp_key.c...
+compiling bsp_oled.c...
+compiling pid.c...
+control.h(13): warning:  #1295-D: Deprecated declaration get_point1_p - give arg types
+  uint8_t get_point1_p();
+control.h(14): warning:  #1295-D: Deprecated declaration get_point2_p - give arg types
+  uint8_t get_point2_p();   //处理坐标函数
+pid.c: 2 warnings, 0 errors
+compiling led.c...
+compiling user_bluetooth.c...
+compiling user_vol.c...
+linking...
+Program Size: Code=8516 RO-data=336 RW-data=152 ZI-data=2552  
+FromELF: creating hex file...
+"..\OBJ\stree_free_ii.axf" - 0 Error(s), 51 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
+                Keil::STM32F1xx_DFP@2.3.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  D:/Keil_v5/ARM/Pack/Keil/STM32F1xx_DFP/2.3.0/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:05
+</pre>
+</body>
+</html>
